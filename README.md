@@ -91,7 +91,10 @@ Java Editions Comparison
 | **Data Storage** | Record Management System (RMS) | Serialization, file I/O, JDBC | JPA, Hibernate, JTA, and ORM systems |
 | **Typical Use Cases** | Smart meters, SIM cards, older feature phones | Standalone utilities, desktop tools, and CLI systems such as VITyarthi | Banking portals, ERP software, and distributed cloud systems |
 
+
 ### JDK / JRE / JVM Architecture
+
+```text
 ┌────────────────────────────────────────────────────────┐
 │                         JDK                            │
 │  ┌────────────────────────────────────────────────┐    │
@@ -201,14 +204,16 @@ Project Structure & Syllabus Mapping
         =================================
 
  ### Quick Workflow Example
-    1.Add Company: Select 4 $\rightarrow$ Enter Company ID (1), Name (TCS), Location (Bhopal), Role (Software Engineer)
-    2.Add Job: Select 7 $\rightarrow$ Enter Job ID (101), Company ID (1), Role (Software Engineer), Minimum CGPA (7.5), Required Skill (Java).
-    3.Add Student: Select 1 $\rightarrow$ Enter Student ID (10410), Name (Himanshi Saxena), Branch (AI/ML), CGPA (8.56), Skills (Java, Python)
-    4.Check Eligibility: Select 11 $\rightarrow$ Enter Student ID (10410) $\rightarrow$ System lists matching Job 101. 
-    5.Apply for Job: Select 12 $\rightarrow$ Enter Student ID (10410) and Job ID (101) $\rightarrow$ Application submitted with status APPLIED.
-    6.Update Status: Select 16 $\rightarrow$ Application ID (1) $\rightarrow$ Update to SELECTED
-    7.View Dashboard: Select 20 to verify updated placement rates and funnel breakdowns
-    8.Save & Exit: Select 21 to persist all changes to placement_data.dat
+   
+
+1. **Add Company:** Select `4` → Enter Company ID (`1`), Name (`TCS`), Location (`Bhopal`), Role (`Software Engineer`).
+2. **Add Job:** Select `7` → Enter Job ID (`101`), Company ID (`1`), Role (`Software Engineer`), Minimum CGPA (`7.5`), Required Skill (`Java`).
+3. **Add Student:** Select `1` → Enter Student ID (`10410`), Name (`Himanshi Saxena`), Branch (`AI/ML`), CGPA (`8.56`), Skills (`Java, Python`).
+4. **Check Eligibility:** Select `11` → Enter Student ID (`10410`) → System lists matching Job 101.
+5. **Apply for Job:** Select `12` → Enter Student ID (`10410`) and Job ID (`101`) → Application submitted with status `APPLIED`.
+6. **Update Status:** Select `16` → Application ID (`1`) → Update to `SELECTED`.
+7. **View Dashboard:** Select `20` to verify updated placement rates and funnel breakdowns.
+8. **Save & Exit:** Select `21` to persist all changes to `placement_data.dat`.
 
 ## Instructions for Testing
 
