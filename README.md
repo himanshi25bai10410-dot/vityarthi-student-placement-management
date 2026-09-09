@@ -4,9 +4,9 @@
 
 ## Project Overview
 
-**VITyarthi** is a comprehensive, console-based Java application designed to automate and streamline campus placement activities[cite: 4, 8]. It provides an integrated platform for students, placement cells, and recruiters to manage student profiles, corporate registrations, job drive listings, eligibility evaluations, multi-stage application workflows, and placement analytics[cite: 4, 8]. 
+**VITyarthi** is a comprehensive, console-based Java application designed to automate and streamline campus placement activities. It provides an integrated platform for students, placement cells, and recruiters to manage student profiles, corporate registrations, job drive listings, eligibility evaluations, multi-stage application workflows, and placement analytics
 
-The system demonstrates fundamental and advanced Object-Oriented Programming (OOP) principles, defensive input validation, Java Collections framework operations, and file persistence using Java Object Serialization (`placement_data.dat`)[cite: 8, 9, 10].
+The system demonstrates fundamental and advanced Object-Oriented Programming (OOP) principles, defensive input validation, Java Collections framework operations, and file persistence using Java Object Serialization (`placement_data.dat`)]
 
 ---
 
