@@ -125,20 +125,15 @@ JDK (Java Development Kit): Complete software development bundle containing the 
    * Under **System Variables**, create `JAVA_HOME` pointing to your installation directory (e.g., `C:\Program Files\Java\jdk-17`).
    * Append `%JAVA_HOME%\bin` to the `Path` variable.
 4. **Verify Installation:**
-  
-  ```bash
-   java -version
-   javac -version
+  java -version
+javac -version
 
 IDE Setup (VS Code / Eclipse / IntelliJ)
 
-1.Open your chosen IDE and select Open Folder / Import Existing Project[cite: 10].
-
-2.Select the cloned vityarthi-student-placement-management directory.
-
-3.Ensure the project SDK is configured to JDK 8 or above.
-
-4.Run Main.java directly through the IDE interface or internal terminal.
+1. Open your chosen IDE and select Open Folder / Import Existing Project.
+2. Select the cloned vityarthi-student-placement-management directory.
+3. Ensure the project SDK is configured to JDK 8 or above.
+4. Run Main.java directly through the IDE interface or internal terminal.
 
 Project Structure & Syllabus Mapping
 
@@ -151,7 +146,7 @@ Project Structure & Syllabus Mapping
 | **Collections Framework** | `Main.java` | `ArrayList<Student>`, `ArrayList<Job>` | Provides in-memory storage and dynamic listing of domain entities. |
 | **Control Flow & Switches** | `Main.java` | `switch (choice)` | Dispatches user requests across 21 console menu actions. |
 | **Predicate Filtering** | `Main.java` | `applications.removeIf(...)` | Performs cascading deletion of related application records using lambda predicates. |
-| **Defensive Validation** | `Main.java` | `readPositiveInt()`, `readCgpa()` | Sanitizes user input and validates bounds, including \(0.0 \leq \text{CGPA} \leq 10.0\). |
+| **Defensive Validation** | `Main.java` | `readPositiveInt()`, `readCgpa()` | Sanitizes user input and validates bounds, including 0.0 <= CGPA <= 10.0. |
 | **Serialization & Persistence** | `Main.java` | `saveData()`, `loadData()` | Stores and restores application data using `ObjectOutputStream` and `ObjectInputStream` binary serialization. |
 | **State Machine / Workflow** | `Application.java` | `setStatus(String status)` | Updates the placement candidate lifecycle, such as application status stages. |
 | **String Manipulation** | `Job.java`, `Main.java` | `.toLowerCase()`, `.contains()` | Enables case-insensitive, multi-parameter job and skill search functionality. |
@@ -159,59 +154,63 @@ Project Structure & Syllabus Mapping
 
 ### Application Features
 
-    1. Student Management
-        Registration: Add students with auto-validated positive numeric IDs, validated CGPA, branch, and technical skill sets.  
-        Roster Inspection: Display formatted rosters of all students or perform exact-match lookups using unique Student IDs.  
-        Cascading Deletion: Deleting a student systematically purges all associated applications to prevent orphaned records
+1. Student Management
+   - Registration: Add students with auto-validated positive numeric IDs, validated CGPA, branch, and technical skill sets.
+   - Roster Inspection: Display formatted rosters of all students or perform exact-match lookups using unique Student IDs.
+   - Cascading Deletion: Deleting a student systematically purges all associated applications to prevent orphaned records.
 
-    2. Company & Recruiter Directory
-        Registration: Register recruiting firms with unique Corporate IDs, corporate names, primary locations, and role classifications. 
-        Search Operations: Substring search utility matching company names regardless of case formatting.  
-        Integrity Guard: Restricts deletion of companies that currently hold active job vacancy postings
+2. Company & Recruiter Directory
+   - Registration: Register recruiting firms with unique Corporate IDs, corporate names, primary locations, and role classifications.
+   - Search Operations: Substring search utility matching company names regardless of case formatting.
+   - Integrity Guard: Restricts deletion of companies that currently hold active job vacancy postings.
 
-    3. Job Drive & Automated Eligibility Engine
-        Job Creation: Post openings specifying role titles, assigned company IDs, CGPA cutoff, and required technical proficiencies.  
-        Automated Screening: Automated evaluation (Job.isEligible) checking whether a candidate satisfies both the academic cutoff and technical requirements.  Flexible Search: Search job vacancies by specific skills, job titles, or minimum CGPA compatibility.
+3. Job Drive & Automated Eligibility Engine
+   - Job Creation: Post openings specifying role titles, assigned company IDs, CGPA cutoff, and required technical proficiencies.
+   - Automated Screening: Automated evaluation (Job.isEligible) checking whether a candidate satisfies both the academic cutoff and technical requirements.
+   - Flexible Search: Search job vacancies by specific skills, job titles, or minimum CGPA compatibility.
 
-    4. Application Tracking & Status
-         ManagementEnforced Validation: Validates student eligibility prior to application creation and blocks duplicate submissions for the same opening.  
-         Status Updates: Update application progress through defined hiring stages: APPLIED $\rightarrow$ SHORTLISTED $\rightarrow$ SELECTED $\rightarrow$ REJECTED.  Targeted Filtering: View applications filtered by specific Student IDs or overall hiring stages.
+4. Application Tracking & Status Management
+   - Enforced Validation: Validates student eligibility prior to application creation and blocks duplicate submissions for the same opening.
+   - Status Updates: Update application progress through defined hiring stages: APPLIED -> SHORTLISTED -> SELECTED -> REJECTED.
+   - Targeted Filtering: View applications filtered by specific Student IDs or overall hiring stages.
 
-     5. Placement Dashboard & Analytics
-        Overview Aggregates: Displays total counts of registered students, registered companies, active jobs, and total applications.
-        Conversion Metrics: Real-time evaluation of total selections against overall applications:$$\text{Placement Rate} = \left(\frac{\text{Selected Applications}}{\text{Total Applications}}\right) \times 100$$
-        Engagement Tracking: Tracks overall placement participation rates (students who applied vs. unapplied)
+5. Placement Dashboard & Analytics
+   - Overview Aggregates: Displays total counts of registered students, registered companies, active jobs, and total applications.
+   - Conversion Metrics: Real-time evaluation of total selections against overall applications:
+     Placement Rate = (Selected Applications / Total Applications) * 100
+   - Engagement Tracking: Tracks overall placement participation rates (students who applied vs. unapplied).
 
-        Usage Guide & Operations
-        Interactive Menu Overview
-        The system provides a 21-point menu upon launching
-        =================================
-          STUDENT PLACEMENT MANAGEMENT
-        =================================
-        1. Add Student                12. Apply for Job
-        2. View All Students          13. View All Applications
-        3. Search Student             14. View Student Applications
-        4. Add Company                15. Filter Applications by Status
-        5. View All Companies         16. Update Application Status
-        6. Search Company by Name     17. Delete Student
-        7. Add Job                    18. Delete Company
-        8. View All Jobs              19. Delete Job
-        9. Search Jobs by Role/Skill  20. Dashboard / Statistics
-        10. Filter Jobs by CGPA       21. Exit
-        11. Find Eligible Jobs
-        =================================
+### Usage Guide & Operations
 
- ### Quick Workflow Example
-   
+Interactive Menu Overview
+The system provides a 21-point menu upon launching:
 
-1. **Add Company:** Select `4` → Enter Company ID (`1`), Name (`TCS`), Location (`Bhopal`), Role (`Software Engineer`).
-2. **Add Job:** Select `7` → Enter Job ID (`101`), Company ID (`1`), Role (`Software Engineer`), Minimum CGPA (`7.5`), Required Skill (`Java`).
-3. **Add Student:** Select `1` → Enter Student ID (`10410`), Name (`Himanshi Saxena`), Branch (`AI/ML`), CGPA (`8.56`), Skills (`Java, Python`).
-4. **Check Eligibility:** Select `11` → Enter Student ID (`10410`) → System lists matching Job 101.
-5. **Apply for Job:** Select `12` → Enter Student ID (`10410`) and Job ID (`101`) → Application submitted with status `APPLIED`.
-6. **Update Status:** Select `16` → Application ID (`1`) → Update to `SELECTED`.
-7. **View Dashboard:** Select `20` to verify updated placement rates and funnel breakdowns.
-8. **Save & Exit:** Select `21` to persist all changes to `placement_data.dat`.
+=================================
+  STUDENT PLACEMENT MANAGEMENT
+=================================
+ 1. Add Student                12. Apply for Job
+ 2. View All Students          13. View All Applications
+ 3. Search Student             14. View Student Applications
+ 4. Add Company                15. Filter Applications by Status
+ 5. View All Companies         16. Update Application Status
+ 6. Search Company by Name     17. Delete Student
+ 7. Add Job                    18. Delete Company
+ 8. View All Jobs              19. Delete Job
+ 9. Search Jobs by Role/Skill  20. Dashboard / Statistics
+10. Filter Jobs by CGPA        21. Exit
+11. Find Eligible Jobs
+=================================
+
+### Quick Workflow Example
+
+1. Add Company: Select 4 -> Enter Company ID (1), Name (TCS), Location (Bhopal), Role (Software Engineer).
+2. Add Job: Select 7 -> Enter Job ID (101), Company ID (1), Role (Software Engineer), Minimum CGPA (7.5), Required Skill (Java).
+3. Add Student: Select 1 -> Enter Student ID (10410), Name (Himanshi Saxena), Branch (AI/ML), CGPA (8.56), Skills (Java, Python).
+4. Check Eligibility: Select 11 -> Enter Student ID (10410) -> System lists matching Job 101.
+5. Apply for Job: Select 12 -> Enter Student ID (10410) and Job ID (101) -> Application submitted with status APPLIED.
+6. Update Status: Select 16 -> Application ID (1) -> Update to SELECTED.
+7. View Dashboard: Select 20 to verify updated placement rates and funnel breakdowns.
+8. Save & Exit: Select 21 to persist all changes to placement_data.dat.
 
 ### Instructions for Testing
 
@@ -225,9 +224,8 @@ Project Structure & Syllabus Mapping
 | **TC-06** | Cascading Purge Integrity | Delete a student who has active job applications. | The student is deleted, and all linked applications are removed using `removeIf(...)`. |
 | **TC-07** | Persistence Engine | Add records, select **Option 21**, then rerun the application using `java -cp bin Main`. | The console displays: `Previous data loaded successfully!` and restores all previously saved records. |
 
- 
 ### Author & Academic Submission Details
 * **Project Title:** VITyarthi – Student Placement Management System
 * **Author:** Himanshi Saxena
 * **Registration ID:** 25BAI10410
-* **Repository:** [GitHub Link](https://github.com/himanshi25bai10410-dot/vityarthi-student-placement-management.git)
+* **Repository:** https://github.com/himanshi25bai10410-dot/vityarthi-student-placement-management.git
