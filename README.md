@@ -213,7 +213,7 @@ Project Structure & Syllabus Mapping
 7. **View Dashboard:** Select `20` to verify updated placement rates and funnel breakdowns.
 8. **Save & Exit:** Select `21` to persist all changes to `placement_data.dat`.
 
-## Instructions for Testing
+### Instructions for Testing
 
 | Test Case ID | Target Feature | Test Action / Input | Expected Result |
 |---|---|---|---|
@@ -226,7 +226,7 @@ Project Structure & Syllabus Mapping
 | **TC-07** | Persistence Engine | Add records, select **Option 21**, then rerun the application using `java -cp bin Main`. | The console displays: `Previous data loaded successfully!` and restores all previously saved records. |
 
  
-## Author & Academic Submission Details
+### Author & Academic Submission Details
 * **Project Title:** VITyarthi – Student Placement Management System
 * **Author:** Himanshi Saxena
 * **Registration ID:** 25BAI10410
