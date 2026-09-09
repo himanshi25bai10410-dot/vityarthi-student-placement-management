@@ -52,65 +52,63 @@ java -cp bin Main
 
 ### Evolution of Java
 
-1995: Java 1.0 – Initial public release by Sun Microsystems.
 
-1997: Java 1.1 – Inner classes, JavaBeans, RMI, reflection, and JDBC.
 
-1998: Java 1.2 (J2SE) – Introduction of the Collections Framework, Swing GUI, and JIT compiler.
+- **1995**: Java 1.0 - Initial release by Sun Microsystems
+- **1997**: Java 1.1 - Inner classes, reflection, JDBC
+- **1998**: Java 1.2 (J2SE) - Collections framework, Swing GUI
+- **2000**: Java 1.3 - HotSpot JVM, JNDI
+- **2002**: Java 1.4 - Assertions, NIO, logging API
+- **2004**: Java 5.0 - Generics, annotations, autoboxing, enhanced for-loop
+- **2006**: Java 6 - Performance improvements, compiler API
+- **2011**: Java 7 - Try-with-resources, diamond operator, strings in switch
+- **2014**: Java 8 - Lambda expressions, streams, Optional, default methods
+- **2017**: Java 9 - Modules (Project Jigsaw), JShell
+- **2018**: Java 10 - Local variable type inference (var)
+- **2018**: Java 11 - LTS version, HTTP client API
+- **2019**: Java 12-13 - Switch expressions, text blocks (preview)
+- **2020**: Java 14-15 - Records (preview), pattern matching
+- **2021**: Java 16-17 - Records finalized, sealed classes, LTS version
+- **2022-2024**: Java 18-21 - Virtual threads, pattern matching enhancements.
 
-2000: Java 1.3 – HotSpot JVM and Java Naming and Directory Interface (JNDI).
 
-2002: Java 1.4 – Assertions, regular expressions, non-blocking I/O (NIO), and logging API.
 
-2004: Java 5.0 – Generics, annotations, autoboxing/unboxing, enums, varargs, and enhanced for-each loop.
+## Java Editions Comparison
 
-2006: Java 6 – Scripting language support, compiler API, and major performance optimizations.
-
-2011: Java 7 – Try-with-resources, diamond operator (<>), strings in switch, and Fork/Join framework.
-
-2014: Java 8 – Lambda expressions, Stream API, Functional Interfaces, java.time, and default methods.
-
-2017: Java 9 – Java Platform Module System (Project Jigsaw) and JShell REPL.
-
-2018: Java 10–11 (LTS) – Local variable type inference (var), HTTP Client API, and long-term support release.
-
-2019–2020: Java 12–15 – Switch expressions, text blocks, and preview features for records.
-
-2021: Java 17 (LTS) – Sealed classes, Pattern Matching for switch, and finalized Records.
-
-2022–2024: Java 18–21 (LTS) – Virtual Threads (Project Loom), Structured Concurrency, and Scoped Values.
-
-Java Editions Comparison
-
-| Feature | Java ME (Micro Edition) | Java SE (Standard Edition) | Java EE / Jakarta EE (Enterprise Edition) |
-|---|---|---|---|
-| **Target Platform** | Embedded systems, microcontrollers, IoT devices | Desktop applications, command-line utilities, core backends | Large-scale enterprise web systems and microservices |
-| **Memory Footprint** | Extremely small (< 1 MB to a few MBs) | Moderate (30 MB–200 MB) | Heavy (250 MB+ runtime) |
-| **Core APIs** | Minimal API subset (CLDC / CDC) | Core Java APIs (`java.lang`, `java.util`, `java.io`) | Full Java SE APIs plus enterprise APIs such as JPA, Servlets, and JMS |
-| **UI Support** | LCDUI, MIDP | Swing, JavaFX, AWT, console CLI | Web-based interfaces using JSF, JSP, and REST endpoints |
-| **Data Storage** | Record Management System (RMS) | Serialization, file I/O, JDBC | JPA, Hibernate, JTA, and ORM systems |
-| **Typical Use Cases** | Smart meters, SIM cards, older feature phones | Standalone utilities, desktop tools, and CLI systems such as VITyarthi | Banking portals, ERP software, and distributed cloud systems |
+| Feature | Java ME (Micro Edition) | Java SE (Standard Edition) | Java EE (Enterprise Edition) |
+|---------|------------------------|---------------------------|------------------------------|
+| **Target Platform** | Mobile devices, embedded systems | Desktop applications, standalone apps | Enterprise web applications |
+| **Memory Footprint** | Very small (< 1MB) | Moderate (50-200MB) | Large (100MB+) |
+| **Core APIs** | Limited subset | Full Java APIs | SE + Enterprise APIs |
+| **GUI Support** | MIDP, LWUIT | Swing, JavaFX, AWT | Web-based (JSF, JSP) |
+| **Database** | Basic RMS | JDBC | JPA, EJB, advanced ORM |
+| **Networking** | HTTP, sockets (limited) | Full networking APIs | Web services, REST, SOAP |
+| **Security** | Basic sandbox | Comprehensive security | Enterprise security, JAAS |
+| **Use Cases** | IoT devices, feature phones | Desktop apps, utilities | Web apps, microservices |
+| **Examples** | Nokia apps, smart cards | NetBeans, Eclipse | Banking systems, e-commerce |
 
 
 ### JDK / JRE / JVM Architecture
 
-```text
-┌────────────────────────────────────────────────────────┐
-│                         JDK                            │
-│  ┌────────────────────────────────────────────────┐    │
-│  │                      JRE                       │    │
-│  │  ┌────────────────────────────────────────┐    │    │
-│  │  │                  JVM                   │    │    │
-│  │  │  - Class Loader Subsystem              │    │    │
-│  │  │  - Bytecode Execution Engine (JIT)     │    │    │
-│  │  │  - Memory Management & Garbage Collector│   │    │
-│  │  └────────────────────────────────────────┘    │    │
-│  │  + Core Class Libraries (java.lang, java.util) │    │
-│  │  + Java Object Serialization Engine (java.io)  │    │
-│  └────────────────────────────────────────────────┘    │
-│  + Development Tools (javac, jar, javadoc, jdb)       │
-│  + Header Files & Execution Toolchains                │
-└────────────────────────────────────────────────────────┘
+```
+┌─────────────────────────────────────┐
+│              JDK                    │
+│  ┌─────────────────────────────┐    │
+│  │            JRE              │    │
+│  │  ┌─────────────────────┐    │    │
+│  │  │        JVM          │    │    │
+│  │  │  - Bytecode Exec.   │    │    │
+│  │  │  - Memory Mgmt      │    │    │
+│  │  │  - Garbage Collect. │    │    │
+│  │  └─────────────────────┘    │    │
+│  │  + Core Libraries (java.*)  │    │
+│  │  + Runtime Classes          │    │
+│  └─────────────────────────────┘    │
+│  + Development Tools (javac, jar)   │
+│  + Documentation & Headers          │
+└─────────────────────────────────────┘
+```
+
 JVM (Java Virtual Machine): Abstract machine that loads and executes compiled .class bytecode, manages heap/stack memory, and performs automatic garbage collection.
 
 JRE (Java Runtime Environment): Provides the execution environment consisting of the JVM, core class libraries, and supporting runtime files.
