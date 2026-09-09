@@ -184,20 +184,19 @@ Project Structure & Syllabus Mapping
 
 Interactive Menu Overview
 The system provides a 21-point menu upon launching:
-
 =================================
   STUDENT PLACEMENT MANAGEMENT
 =================================
- 1. Add Student                12. Apply for Job
- 2. View All Students          13. View All Applications
- 3. Search Student             14. View Student Applications
- 4. Add Company                15. Filter Applications by Status
- 5. View All Companies         16. Update Application Status
- 6. Search Company by Name     17. Delete Student
- 7. Add Job                    18. Delete Company
- 8. View All Jobs              19. Delete Job
- 9. Search Jobs by Role/Skill  20. Dashboard / Statistics
-10. Filter Jobs by CGPA        21. Exit
+1. Add Student                12. Apply for Job
+2. View All Students          13. View All Applications
+3. Search Student             14. View Student Applications
+4. Add Company                15. Filter Applications by Status
+5. View All Companies         16. Update Application Status
+6. Search Company by Name     17. Delete Student
+7. Add Job                    18. Delete Company
+8. View All Jobs              19. Delete Job
+9. Search Jobs by Role/Skill  20. Dashboard / Statistics
+10. Filter Jobs by CGPA       21. Exit
 11. Find Eligible Jobs
 =================================
 
