@@ -187,17 +187,27 @@ The system provides a 21-point menu upon launching:
 =================================
   STUDENT PLACEMENT MANAGEMENT
 =================================
-1. Add Student                12. Apply for Job
-2. View All Students          13. View All Applications
-3. Search Student             14. View Student Applications
-4. Add Company                15. Filter Applications by Status
-5. View All Companies         16. Update Application Status
-6. Search Company by Name     17. Delete Student
-7. Add Job                    18. Delete Company
-8. View All Jobs              19. Delete Job
-9. Search Jobs by Role/Skill  20. Dashboard / Statistics
-10. Filter Jobs by CGPA       21. Exit
-11. Find Eligible Jobs
+1. Add Student
+2. 12. Apply for Job
+3. View All Students
+4.  13. View All Applications
+5. Search Student
+6.  14. View Student Applications
+7. Add Company
+8.  15. Filter Applications by Status
+9. View All Companies
+10. 16. Update Application Status
+11. Search Company by Name
+12.  17. Delete Student
+13. Add Job
+14.  18. Delete Company
+15. View All Jobs
+16. 19. Delete Job
+17. Search Jobs by Role/Skill
+18. 20. Dashboard / Statistics
+19. Filter Jobs by CGPA
+20. 21. Exit
+21. Find Eligible Jobs
 =================================
 
 ### Quick Workflow Example
