@@ -100,13 +100,13 @@ Java Editions Comparison
 │  │  │                  JVM                   │    │    │
 │  │  │  - Class Loader Subsystem              │    │    │
 │  │  │  - Bytecode Execution Engine (JIT)     │    │    │
-│  │  │  - Memory Management & Garbage Collector│   │    │
+│  │  │  - Memory Management & Garbage Collectr│    │    │
 │  │  └────────────────────────────────────────┘    │    │
 │  │  + Core Class Libraries (java.lang, java.util) │    │
 │  │  + Java Object Serialization Engine (java.io)  │    │
 │  └────────────────────────────────────────────────┘    │
-│  + Development Tools (javac, jar, javadoc, jdb)       │
-│  + Header Files & Execution Toolchains                │
+│  + Development Tools (javac, jar, javadoc, jdb)        │
+│  + Header Files & Execution Toolchains                 │
 └────────────────────────────────────────────────────────┘
 
 JVM (Java Virtual Machine): Abstract machine that loads and executes compiled .class bytecode, manages heap/stack memory, and performs automatic garbage collection.
