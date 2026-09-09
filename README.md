@@ -214,14 +214,14 @@ The system provides a 21-point menu upon launching:
 
 ### Quick Workflow Example
 
-1. Add Company: Select 4 -> Enter Company ID (1), Name (TCS), Location (Bhopal), Role (Software Engineer).
-2. Add Job: Select 7 -> Enter Job ID (101), Company ID (1), Role (Software Engineer), Minimum CGPA (7.5), Required Skill (Java).
-3. Add Student: Select 1 -> Enter Student ID (10410), Name (Himanshi Saxena), Branch (AI/ML), CGPA (8.56), Skills (Java, Python).
-4. Check Eligibility: Select 11 -> Enter Student ID (10410) -> System lists matching Job 101.
-5. Apply for Job: Select 12 -> Enter Student ID (10410) and Job ID (101) -> Application submitted with status APPLIED.
-6. Update Status: Select 16 -> Application ID (1) -> Update to SELECTED.
-7. View Dashboard: Select 20 to verify updated placement rates and funnel breakdowns.
-8. Save & Exit: Select 21 to persist all changes to placement_data.dat.
+1. **Add Company:** Select `4` -> Enter Company ID (`1`), Name (`TCS`), Location (`Bhopal`), Role (`Software Engineer`).
+2. **Add Job:** Select `7` -> Enter Job ID (`101`), Company ID (`1`), Role (`Software Engineer`), Minimum CGPA (`7.5`), Required Skill (`Java`).
+3. **Add Student:** Select `1` -> Enter Student ID (`10410`), Name (`Himanshi Saxena`), Branch (`AI/ML`), CGPA (`8.56`), Skills (`Java, Python`).
+4. **Check Eligibility:** Select `11` -> Enter Student ID (`10410`) -> System lists matching Job `101`.
+5. **Apply for Job:** Select `12` -> Enter Student ID (`10410`), Job ID (`101`) -> Application submitted with status `APPLIED`.
+6. **Update Status:** Select `16` -> Enter Application ID (`1`) -> Select option `3` (SELECTED) -> Status updated to `SELECTED`.
+7. **View Dashboard:** Select `20` -> View placement statistics, total counts, and funnel metrics.
+8. **Save & Exit:** Select `21` -> Automatically persists all records to `placement_data.dat` and exits the program.
 
 ### Instructions for Testing
 
